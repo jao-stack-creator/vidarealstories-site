@@ -17,7 +17,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Sacramento&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Sacramento&display=swap"></noscript>
+<link rel="preload" as="image" href="img/hero-phone.webp">
 
 <!-- ===== PIXEL DA META (Vida Real Stories) ===== -->
 <script>
@@ -82,9 +84,9 @@ a{color:inherit}
 /* hero */
 .hero{padding-top:32px;padding-bottom:0}
 @media(min-width:1024px){.hero{padding-top:72px}}
-.glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:768px;height:420px;border-radius:9999px;background:rgba(226,93,139,.22);filter:blur(120px);pointer-events:none}
+.glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:140%;max-width:1100px;height:620px;background:radial-gradient(closest-side,rgba(226,93,139,.28),rgba(226,93,139,0));pointer-events:none}
 .hero .narrow{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:9999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(4px);font-size:14px;font-weight:500;color:rgba(255,255,255,.92);margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:9999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:14px;font-weight:500;color:rgba(255,255,255,.92);margin-bottom:22px}
 .h1{font-size:33px;line-height:1.1;font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:22px}
 @media(min-width:768px){.h1{font-size:52px}}
 .hl{background:var(--grad-headline);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -92,7 +94,7 @@ a{color:inherit}
 @media(min-width:768px){.lead{font-size:19px}}
 .hero .micro{color:#bba9b3}
 .hero-img-wrap{margin:36px auto 0;width:min(250px,62vw);height:clamp(280px,88vw,360px);overflow:hidden}
-.hero-img{width:100%;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45))}
+.hero-img{width:100%}
 
 /* features */
 .grid4{display:grid;gap:16px}
@@ -123,7 +125,7 @@ a{color:inherit}
 .check{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:26px}
 .check li{display:flex;gap:14px;align-items:flex-start;font-size:16px;line-height:1.5;color:#43343c}
 .ck{flex:none;width:26px;height:26px;border-radius:50%;background:var(--primary-border);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
-.phone2{width:min(230px,58vw);margin:0 auto;filter:drop-shadow(0 24px 36px rgba(0,0,0,.25))}
+.phone2{width:min(230px,58vw);margin:0 auto}
 
 /* bonus */
 .bonus{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin:0 -16px;scrollbar-width:none}
