@@ -141,7 +141,7 @@ a{color:inherit}
 @media(min-width:768px){.plans{grid-template-columns:1fr 1fr;gap:28px}}
 .plan{position:relative;border-radius:24px;padding:32px 26px}
 .plan.basic{background:#fff;border:1px solid var(--border-strong);box-shadow:0 2px 6px rgba(0,0,0,.04)}
-.plan.prem{background:var(--surface-dark);border:1px solid #3d2a3f;color:#f1e4ea;box-shadow:0 25px 50px -12px rgba(31,21,32,.5)}
+.plan.prem{order:-1;background:var(--surface-dark);border:1px solid #3d2a3f;color:#f1e4ea;box-shadow:0 25px 50px -12px rgba(31,21,32,.5)}
 @media(min-width:768px){.plan.prem{transform:scale(1.04)}}
 .ribbon{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(to right,#e25d8b,#a35bd0);color:#fff;padding:7px 20px;border-radius:9999px;font-size:13px;font-weight:700;white-space:nowrap;box-shadow:0 8px 18px -6px rgba(0,0,0,.35)}
 .plan h3{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
@@ -156,6 +156,12 @@ a{color:inherit}
 .per{font-size:13px;margin-bottom:22px}
 .plan.basic .per{color:var(--subtle)}
 .plan.prem .per{color:#c9b3be}
+.plus10{display:inline-block;background:#ffd640;color:#3a2830;font-weight:700;font-size:13px;padding:5px 12px;border-radius:9999px;margin:-8px 0 16px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 22px}
+.vs div{border-radius:14px;padding:10px;text-align:center;font-size:13px;line-height:1.35}
+.vs .a{background:rgba(255,255,255,.06);color:#c9b3be}
+.vs .b{background:rgba(226,93,139,.18);color:#fff;border:1px solid rgba(226,93,139,.55)}
+.vs b{display:block;font-size:22px}
 .plan ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
 .plan li{position:relative;padding-left:26px;font-size:15px;line-height:1.45}
 .plan li .y{position:absolute;left:0;top:0}
@@ -316,7 +322,7 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
           <li class="no"><span class="y">✕</span>Pack completo com +150</li>
           <li class="no"><span class="y">✕</span>Figurinhas novas toda semana</li>
         </ul>
-        <a class="btn light checkout" data-plan="basico" href="#">Quero o Básico</a>
+        <a class="btn light checkout" data-plan="basico" href="#">Quero só o Básico</a>
         <p class="secure">🔒 Compra segura • Acesso imediato</p>
       </div>
       <div class="plan prem">
@@ -325,6 +331,8 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
         <div class="pname">Pack Vida Real Completo</div>
         <div class="price"><small>R$</small><strong>19,90</strong></div>
         <div class="per">pagamento único • menos de R$ 0,14 por figurinha</div>
+        <div class="plus10">👉 só R$ 10 a mais que o Básico</div>
+        <div class="vs"><div class="a">Básico<b>80</b>figurinhas</div><div class="b">Completo<b>150+</b>figurinhas + novas toda semana</div></div>
         <ul>
           <li><span class="y">✓</span><b>+150 figurinhas</b> com frases da vida real</li>
           <li><span class="y">✓</span>Todas as 10 pastas por momento do dia</li>
@@ -333,7 +341,7 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
           <li><span class="y">✓</span>Acesso vitalício</li>
           <li><span class="y">✓</span>Guia "Como usar" + suporte por e-mail</li>
         </ul>
-        <a class="btn checkout" data-plan="completo" href="#">Quero o Completo</a>
+        <a class="btn checkout" data-plan="completo" href="#">Quero o Completo →</a>
         <p class="secure">🔒 Compra segura • Acesso imediato</p>
       </div>
     </div>
