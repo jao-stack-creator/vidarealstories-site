@@ -312,7 +312,7 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
       <div class="plan basic">
         <h3>Básico</h3>
         <div class="pname">Pack Vida Real Básico</div>
-        <div class="price"><small>R$</small><strong>9,90</strong></div>
+        <div class="price"><small>R$</small><strong>19,90</strong></div>
         <div class="per">pagamento único</div>
         <ul>
           <li><span class="y">✓</span>80 figurinhas (8 por momento do dia)</li>
@@ -329,9 +329,9 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
         <div class="ribbon">⭐ RECOMENDADO</div>
         <h3>Completo</h3>
         <div class="pname">Pack Vida Real Completo</div>
-        <div class="price"><small>R$</small><strong>19,90</strong></div>
-        <div class="per">pagamento único • menos de R$ 0,14 por figurinha</div>
-        <div class="plus10">👉 só R$ 10 a mais que o Básico</div>
+        <div class="price"><small>R$</small><strong>25,90</strong></div>
+        <div class="per">pagamento único • menos de R$ 0,18 por figurinha</div>
+        <div class="plus10">👉 só R$ 6 a mais que o Básico</div>
         <div class="vs"><div class="a">Básico<b>80</b>figurinhas</div><div class="b">Completo<b>150+</b>figurinhas + novas toda semana</div></div>
         <ul>
           <li><span class="y">✓</span><b>+150 figurinhas</b> com frases da vida real</li>
@@ -410,7 +410,7 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
       if (qs) url += (url.indexOf('?') > -1 ? '&' : '?') + qs.slice(1);
       a.href = url;
       a.addEventListener('click', function(){
-        if (window.fbq) fbq('track', 'InitiateCheckout', {value: a.dataset.plan === 'completo' ? 19.90 : 9.90, currency: 'BRL'});
+        if (window.fbq) fbq('track', 'InitiateCheckout', {value: a.dataset.plan === 'completo' ? 25.90 : 19.90, currency: 'BRL'});
       });
     });
   })();
