@@ -208,6 +208,12 @@ footer{position:relative;margin-top:64px;padding-top:28px;border-top:1px solid r
 footer a{color:#cdb8c3;margin:0 8px}
 footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
 .brand{font-family:Sacramento,cursive;font-size:40px;color:#f7a3bf;line-height:1}
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(31,21,32,.96);display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s var(--ease)}
+.stickybar.on{transform:none}
+.stickybar .t{color:#f1e4ea;font-size:13px;line-height:1.25;flex:1}
+.stickybar .t b{display:block;font-size:16px;color:#fff}
+.stickybar .btn{min-height:48px;padding:12px 20px;width:auto;font-size:14px;flex:none}
+@media(min-width:900px){.stickybar{display:none}}
 </style>
 </head>
 <body>
@@ -217,27 +223,11 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
   <div class="glow"></div>
   <div class="narrow">
     <div class="badge">✨ Figurinhas pra stories da vida real</div>
-    <h1 class="h1"><span class="hl">+150 Figurinhas</span><br>pra deixar seu story lindo em 10 segundos</h1>
-    <p class="lead">Frases que você usaria de verdade — café, rotina, casa, sextou, autocuidado — prontas pra colar no seu story. Abre, escolhe, posta.</p>
-    <a href="#planos" class="btn">Quero minhas figurinhas</a>
-    <p class="micro">🔒 Pagamento único • Acesso imediato</p>
+    <h1 class="h1"><span class="hl">Story lindo em 5 segundos</span><br>sem Canva: é só copiar e colar</h1>
+    <p class="lead"><b>+150 figurinhas</b> com frases que você usaria de verdade: café, rotina, casa, sextou, autocuidado. Salva no celular e cola no story.</p>
+    <a href="#planos" class="btn">Ver os planos</a>
+    <p class="micro">A partir de <b>R$ 19,90</b> • pagamento único • 7 dias de garantia</p>
     <div class="hero-img-wrap"><img class="hero-img" src="img/hero-phone.webp" alt="Story com figurinhas do Pack Vida Real" width="480" height="1015" fetchpriority="high"></div>
-  </div>
-</section>
-
-<!-- 2. POR QUE VAI AMAR -->
-<section class="section">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="h2">Seu story com a sua cara</h2>
-      <p class="sub">Nada de frase genérica que ninguém usa. São frases do dia a dia da mulher real — do café da manhã ao pijama às 19h.</p>
-    </div>
-    <div class="grid4">
-      <div class="card"><div class="ic">💬</div><div><h3>Frases de verdade</h3><p>Escritas pra rotina real: casa, trabalho, filhos, sextou e aquele café sagrado.</p></div></div>
-      <div class="card"><div class="ic">🗂️</div><div><h3>Organizadas por momento</h3><p>10 pastas: café, bom dia, trabalho, casa, maternidade, sextou, autocuidado e mais.</p></div></div>
-      <div class="card"><div class="ic">⚡</div><div><h3>Prontas em segundos</h3><p>Salva no celular e cola no story. Sem editar, sem aplicativo, sem perder tempo.</p></div></div>
-      <div class="card"><div class="ic">📱</div><div><h3>Funciona em qualquer celular</h3><p>PNG com fundo transparente: fica lindo em cima de qualquer foto, no Android ou iPhone.</p></div></div>
-    </div>
   </div>
 </section>
 
@@ -263,7 +253,86 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
       <img src="img/story-8.jpg" alt="Exemplo de story" loading="lazy">
     </div>
     <p class="hint">← arraste pro lado pra ver mais →</p>
-    <div class="center"><a href="#planos" class="btn">Quero transformar meus stories</a></div>
+    <div class="center"><a href="#planos" class="btn">Quero minhas figurinhas</a></div>
+  </div>
+</section>
+
+<!-- 6. PLANOS -->
+<section class="section" id="planos">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2">Escolha seu pack</h2>
+      <p class="sub">Pagamento único. Sem mensalidade. Acesso pra sempre.</p>
+    </div>
+    <div class="plans">
+      <div class="plan basic">
+        <h3>Básico</h3>
+        <div class="pname">Pack Vida Real Básico</div>
+        <div class="price"><small>R$</small><strong>19,90</strong></div>
+        <div class="per">pagamento único</div>
+        <ul>
+          <li><span class="y">✓</span>80 figurinhas (8 por momento do dia)</li>
+          <li><span class="y">✓</span>PNG com fundo transparente</li>
+          <li><span class="y">✓</span>Acesso vitalício</li>
+          <li><span class="y">✓</span>Guia "Como usar"</li>
+          <li class="no"><span class="y">✕</span>Pack completo com +150</li>
+          <li class="no"><span class="y">✕</span>Figurinhas novas toda semana</li>
+        </ul>
+        <a class="btn light checkout" data-plan="basico" href="#">Quero só o Básico</a>
+        <p class="secure">🔒 Compra segura • Acesso imediato • Garantia de 7 dias</p>
+      </div>
+      <div class="plan prem">
+        <div class="ribbon">⭐ RECOMENDADO</div>
+        <h3>Completo</h3>
+        <div class="pname">Pack Vida Real Completo</div>
+        <div class="price"><small>R$</small><strong>25,90</strong></div>
+        <div class="per">pagamento único • menos de R$ 0,18 por figurinha</div>
+        <div class="plus10">👉 só R$ 6 a mais que o Básico</div>
+        <div class="vs"><div class="a">Básico<b>80</b>figurinhas</div><div class="b">Completo<b>150+</b>figurinhas + novas toda semana</div></div>
+        <ul>
+          <li><span class="y">✓</span><b>+150 figurinhas</b> com frases da vida real</li>
+          <li><span class="y">✓</span>Todas as 10 pastas por momento do dia</li>
+          <li><span class="y">✓</span><b>Figurinhas novas toda semana</b>, sem pagar a mais</li>
+          <li><span class="y">✓</span>PNG com fundo transparente</li>
+          <li><span class="y">✓</span>Acesso vitalício</li>
+          <li><span class="y">✓</span>Guia "Como usar" + suporte por e-mail</li>
+        </ul>
+        <a class="btn checkout" data-plan="completo" href="#">Quero o Completo →</a>
+        <p class="secure">🔒 Compra segura • Acesso imediato • Garantia de 7 dias</p>
+      </div>
+    </div>
+    <div class="bump-note">
+      <img src="img/story-fe-1.jpg" alt="Figurinhas cristãs">
+      <p>🙏 <b>Mulher de fé?</b> No checkout você ainda pode adicionar o <b>Pack Fé no Dia a Dia</b>: +100 figurinhas cristãs de gratidão, oração e "Deus no controle".</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GARANTIA -->
+<section class="guarantee">
+  <div class="g-in">
+    <div class="seal"><b>7</b><span>dias</span></div>
+    <div>
+      <div class="lbl">Garantia total</div>
+      <h3>Risco zero pra você</h3>
+      <p>Baixe as figurinhas, use nos seus stories. Se não gostar, é só pedir o reembolso em até 7 dias que devolvemos 100% do valor. Sem perguntas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. POR QUE VAI AMAR -->
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="h2">Seu story com a sua cara</h2>
+      <p class="sub">Nada de frase genérica que ninguém usa. São frases do dia a dia da mulher real — do café da manhã ao pijama às 19h.</p>
+    </div>
+    <div class="grid4">
+      <div class="card"><div class="ic">💬</div><div><h3>Frases de verdade</h3><p>Escritas pra rotina real: casa, trabalho, filhos, sextou e aquele café sagrado.</p></div></div>
+      <div class="card"><div class="ic">🗂️</div><div><h3>Organizadas por momento</h3><p>10 pastas: café, bom dia, trabalho, casa, maternidade, sextou, autocuidado e mais.</p></div></div>
+      <div class="card"><div class="ic">⚡</div><div><h3>Prontas em segundos</h3><p>Salva no celular e cola no story. Sem editar, sem aplicativo, sem perder tempo.</p></div></div>
+      <div class="card"><div class="ic">📱</div><div><h3>Funciona em qualquer celular</h3><p>PNG com fundo transparente: fica lindo em cima de qualquer foto, no Android ou iPhone.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -297,69 +366,6 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
       <div class="bcard"><span class="tag">No plano Completo</span><div class="ic">🔄</div><h3>Atualização toda semana</h3><p>Figurinhas novas entram no seu pack toda semana — e você não paga nada a mais por isso.</p></div>
       <div class="bcard"><span class="tag">Incluso</span><div class="ic">📘</div><h3>Guia "Como usar"</h3><p>Um passo a passo simples, com prints, pra colar as figurinhas no story pela primeira vez.</p></div>
       <div class="bcard"><span class="tag">Incluso</span><div class="ic">💌</div><h3>Suporte por e-mail</h3><p>Ficou com dúvida? É só responder o e-mail da compra que a gente te ajuda.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. PLANOS -->
-<section class="section" id="planos">
-  <div class="wrap">
-    <div class="head">
-      <h2 class="h2">Escolha seu pack</h2>
-      <p class="sub">Pagamento único. Sem mensalidade. Acesso pra sempre.</p>
-    </div>
-    <div class="plans">
-      <div class="plan basic">
-        <h3>Básico</h3>
-        <div class="pname">Pack Vida Real Básico</div>
-        <div class="price"><small>R$</small><strong>19,90</strong></div>
-        <div class="per">pagamento único</div>
-        <ul>
-          <li><span class="y">✓</span>80 figurinhas (8 por momento do dia)</li>
-          <li><span class="y">✓</span>PNG com fundo transparente</li>
-          <li><span class="y">✓</span>Acesso vitalício</li>
-          <li><span class="y">✓</span>Guia "Como usar"</li>
-          <li class="no"><span class="y">✕</span>Pack completo com +150</li>
-          <li class="no"><span class="y">✕</span>Figurinhas novas toda semana</li>
-        </ul>
-        <a class="btn light checkout" data-plan="basico" href="#">Quero só o Básico</a>
-        <p class="secure">🔒 Compra segura • Acesso imediato</p>
-      </div>
-      <div class="plan prem">
-        <div class="ribbon">⭐ RECOMENDADO</div>
-        <h3>Completo</h3>
-        <div class="pname">Pack Vida Real Completo</div>
-        <div class="price"><small>R$</small><strong>25,90</strong></div>
-        <div class="per">pagamento único • menos de R$ 0,18 por figurinha</div>
-        <div class="plus10">👉 só R$ 6 a mais que o Básico</div>
-        <div class="vs"><div class="a">Básico<b>80</b>figurinhas</div><div class="b">Completo<b>150+</b>figurinhas + novas toda semana</div></div>
-        <ul>
-          <li><span class="y">✓</span><b>+150 figurinhas</b> com frases da vida real</li>
-          <li><span class="y">✓</span>Todas as 10 pastas por momento do dia</li>
-          <li><span class="y">✓</span><b>Figurinhas novas toda semana</b>, sem pagar a mais</li>
-          <li><span class="y">✓</span>PNG com fundo transparente</li>
-          <li><span class="y">✓</span>Acesso vitalício</li>
-          <li><span class="y">✓</span>Guia "Como usar" + suporte por e-mail</li>
-        </ul>
-        <a class="btn checkout" data-plan="completo" href="#">Quero o Completo →</a>
-        <p class="secure">🔒 Compra segura • Acesso imediato</p>
-      </div>
-    </div>
-    <div class="bump-note">
-      <img src="img/story-fe-1.jpg" alt="Figurinhas cristãs">
-      <p>🙏 <b>Mulher de fé?</b> No checkout você ainda pode adicionar o <b>Pack Fé no Dia a Dia</b>: +100 figurinhas cristãs de gratidão, oração e "Deus no controle".</p>
-    </div>
-  </div>
-</section>
-
-<!-- 7. GARANTIA -->
-<section class="guarantee">
-  <div class="g-in">
-    <div class="seal"><b>7</b><span>dias</span></div>
-    <div>
-      <div class="lbl">Garantia total</div>
-      <h3>Risco zero pra você</h3>
-      <p>Baixe as figurinhas, use nos seus stories. Se não gostar, é só pedir o reembolso em até 7 dias que devolvemos 100% do valor. Sem perguntas.</p>
     </div>
   </div>
 </section>
@@ -414,6 +420,13 @@ footer .disc{font-size:12px;color:#8a7782;max-width:720px;margin:12px auto 0}
       });
     });
   })();
+</script>
+<div class="stickybar" id="stickybar"><div class="t"><b>+150 figurinhas</b>a partir de R$ 19,90 • pagamento único</div><a href="#planos" class="btn">Ver planos</a></div>
+<script>
+(function(){var bar=document.getElementById('stickybar'),hero=document.querySelector('.hero'),pl=document.getElementById('planos');if(!bar||!window.IntersectionObserver)return;
+var heroVis=true,plVis=false;function up(){bar.classList.toggle('on',!heroVis&&!plVis);}
+new IntersectionObserver(function(e){heroVis=e[0].isIntersecting;up();}).observe(hero);
+new IntersectionObserver(function(e){plVis=e[0].isIntersecting;up();},{threshold:.15}).observe(pl);})();
 </script>
 </body>
 </html>
